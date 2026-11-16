@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 新筆記：複製到 notes/<分類代碼>-<英文關鍵字>.html，換掉所有 {{...}} -->
+  <title>{{中文名稱}} | Jiji 的金融筆記本</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <main class="wrap">
+    <a class="back" href="../index.html">← 回筆記目錄</a>
+
+    <article class="note cat-{{分類代碼}}">
+      <!-- 1. 標題列 -->
+      <header class="note-head">
+        <span class="cat cat-{{分類代碼}}">{{分類名稱}}</span>
+        <h1>{{中文名稱}}<span class="en">{{英文名稱}}</span></h1>
+        <div class="meta">更新日期：{{YYYY-MM-DD}}</div>
+      </header>
+
+      <!-- 2. 一句話重點（40 字以內，需與 data/notes.js 的 summary 相同） -->
+      <p class="tldr">{{一句話重點}}</p>
+
+      <!-- 3. 白話解釋：2～4 段，用生活比喻開頭 -->
+      <h2>白話解釋</h2>
+      <p>{{第一段：生活比喻}}</p>
+      <p>{{第二段：正式說明，專有名詞第一次出現附英文}}</p>
+
+      <!-- 4. 公式（純文字，不可用 LaTeX）。事件類筆記改成「時間軸」：
+           <h2>時間軸</h2>
+           <ol class="timeline"><li><time>YYYY/MM/DD</time>　事件說明</li></ol> -->
+      <h2>公式</h2>
+      <div class="formula">{{純文字公式}}</div>
+      <ul class="symbols">
+        <li><code>{{符號}}</code>：{{意思}}</li>
+      </ul>
+
+      <!-- 5. 例子：每一步都寫算式並驗算 -->
+      <h2>例子</h2>
+      <div class="example">
+        <p>{{題目情境}}</p>
+        <div class="calc">{{逐步算式}}</div>
+        <p class="check">驗算：{{反推或另一種算法確認答案}}</p>
+      </div>
+
+      <!-- 6. 常見誤區：2～3 個 -->
+      <h2>常見誤區</h2>
+      <ul class="pitfall">
+        <li><strong>{{錯誤觀念}}</strong>：{{正確說法}}</li>
+      </ul>
+
+      <!-- 7. 考前速記：3～5 條 -->
+      <h2>考前速記</h2>
+      <ul class="recap">
+        <li>{{重點}}</li>
+      </ul>
+
+      <!-- 8. 相關筆記：相對路徑，沒有就寫「之後補上」 -->
+      <h2>相關筆記</h2>
+      <ul class="related">
+        <li><a href="{{分類代碼-英文關鍵字}}.html">{{筆記名稱}}</a></li>
+      </ul>
+
+      <p class="source">資料來源：{{課堂講義／官方網站}}</p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">Jiji 的金融筆記本｜依 AGENTS.md 規則整理</div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jiji 的金融筆記本</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">📒 FINANCE NOTEBOOK</a>
+      <h1 class="site-title">Jiji 的<span class="mark">金融筆記本</span></h1>
+      <p class="site-sub">政大金融系課程筆記｜一個觀念一頁，用白話講清楚，考前三分鐘複習。</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="toolbar">
+      <input id="search" class="search" type="search" placeholder="搜尋觀念、英文名稱或標籤，例如 Beta">
+      <div id="chips" class="chips"></div>
+    </div>
+    <p id="count" class="count"></p>
+    <section id="cards" class="cards"></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">本站內容依 AGENTS.md 規則由 AI 協作整理｜筆記僅供學習參考，數據以官方資料為準。</div>
+  </footer>
+
+  <script src="data/notes.js"></script>
+  <script src="assets/main.js"></script>
+</body>
+</html>

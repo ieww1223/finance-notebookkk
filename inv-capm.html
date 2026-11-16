@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>資本資產定價模型 CAPM | Jiji 的金融筆記本</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <main class="wrap">
+    <a class="back" href="../index.html">← 回筆記目錄</a>
+
+    <article class="note cat-inv">
+      <header class="note-head">
+        <span class="cat cat-inv">投資學</span>
+        <h1>資本資產定價模型<span class="en">Capital Asset Pricing Model, CAPM</span></h1>
+        <div class="meta">更新日期：2026-11-16</div>
+      </header>
+
+      <p class="tldr">承擔越多「分散不掉的風險」，就該要求越高的報酬。</p>
+
+      <h2>白話解釋</h2>
+      <p>想像你把錢借給朋友：借給最穩的朋友，利息收一點點就好；借給常常出狀況的朋友，你會想多收一點利息當作「壓力補貼」。投資也是一樣，風險越高，你要求的報酬就越高。</p>
+      <p>但 CAPM 說：<strong>不是所有風險都能拿到補貼</strong>。個別公司的壞消息（例如某家公司工廠失火），可以靠多買幾支股票分散掉，這叫非系統性風險（Unsystematic Risk），市場不會補償你。只有整個市場一起漲跌的風險，例如升息、景氣衰退，才分散不掉，這叫系統性風險（Systematic Risk）。</p>
+      <p>衡量一支股票「跟著大盤動多少」的指標就是 Beta（β）。β = 1 代表跟大盤同步；β = 1.5 代表大盤漲 1%，它平均漲 1.5%，波動更大，所以要求的報酬也更高。</p>
+
+      <h2>公式</h2>
+      <div class="formula">E(Ri) = Rf + βi × (E(Rm) − Rf)</div>
+      <ul class="symbols">
+        <li><code>E(Ri)</code>：資產 i 的預期（必要）報酬率</li>
+        <li><code>Rf</code>：無風險利率（Risk-free Rate），常用短期公債殖利率</li>
+        <li><code>βi</code>：資產 i 的 Beta，衡量系統性風險</li>
+        <li><code>E(Rm)</code>：市場投資組合的預期報酬率</li>
+        <li><code>E(Rm) − Rf</code>：市場風險溢酬（Market Risk Premium），承擔市場風險的額外報酬</li>
+      </ul>
+
+      <h2>例子</h2>
+      <div class="example">
+        <p>無風險利率 2%，市場預期報酬 8%，某股票 β = 1.2，它的必要報酬率是多少？</p>
+        <div class="calc">市場風險溢酬 = 8% − 2% = 6%
+β × 溢酬     = 1.2 × 6% = 7.2%
+E(Ri)        = 2% + 7.2% = 9.2%</div>
+        <p class="check">驗算：(9.2% − 2%) ÷ 6% = 7.2% ÷ 6% = 1.2，剛好等於 β ✔</p>
+      </div>
+
+      <h2>常見誤區</h2>
+      <ul class="pitfall">
+        <li><strong>「波動越大的股票報酬一定越高」</strong>：CAPM 只補償系統性風險（β），個別公司的波動可以分散，不會被補償。</li>
+        <li><strong>「β 是負的就不能投資」</strong>：β 為負代表和大盤反向，必要報酬甚至可能低於無風險利率，因為它在大盤下跌時能避險。</li>
+        <li><strong>把 E(Rm) 直接當成溢酬</strong>：公式要乘的是 E(Rm) − Rf，別忘了先扣掉無風險利率。</li>
+      </ul>
+
+      <h2>考前速記</h2>
+      <ul class="recap">
+        <li>公式：E(Ri) = Rf + βi × (E(Rm) − Rf)</li>
+        <li>只補償系統性風險，衡量指標是 β</li>
+        <li>β = 1 跟大盤同步；β &gt; 1 比較激進；β &lt; 1 比較防禦</li>
+        <li>畫成圖就是證券市場線（Security Market Line, SML），橫軸 β、縱軸預期報酬</li>
+      </ul>
+
+      <h2>相關筆記</h2>
+      <ul class="related">
+        <li><a href="event-wti-negative-price.html">2020 WTI 負油價事件</a></li>
+      </ul>
+
+      <p class="source">資料來源：投資學課堂講義</p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">Jiji 的金融筆記本｜依 AGENTS.md 規則整理</div>
+  </footer>
+</body>
+</html>

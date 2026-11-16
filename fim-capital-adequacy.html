@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>資本適足率 | Jiji 的金融筆記本</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <main class="wrap">
+    <a class="back" href="../index.html">← 回筆記目錄</a>
+
+    <article class="note cat-fim">
+      <header class="note-head">
+        <span class="cat cat-fim">金融機構管理</span>
+        <h1>資本適足率<span class="en">Capital Adequacy Ratio, BIS Ratio</span></h1>
+        <div class="meta">更新日期：2026-11-16</div>
+      </header>
+
+      <p class="tldr">銀行自己的錢，夠不夠承受它放出去那些資產的風險。</p>
+
+      <h2>白話解釋</h2>
+      <p>銀行的錢大部分是存款戶的，只有一小部分是股東自己出的「本錢」。如果放出去的貸款收不回來，損失要先由這筆本錢吸收；本錢太少，一出事就會虧到存款戶的錢。</p>
+      <p>資本適足率就是在問：<strong>銀行的自有資本（Regulatory Capital）占「風險性資產」的比例夠不夠高？</strong>這個規範來自國際清算銀行（BIS）底下的巴塞爾銀行監理委員會所訂的巴塞爾協定（Basel Accords），所以也叫 BIS 比率。</p>
+      <p>重點是分母不是「總資產」，而是風險性資產（Risk-Weighted Assets, RWA）：越危險的資產，計算時的權數越高。例如持有本國政府公債風險很低，一般企業放款風險較高，所以同樣借出 100 元，後者吃掉的資本比較多。</p>
+
+      <h2>公式</h2>
+      <div class="formula">資本適足率 = 合格自有資本 ÷ 風險性資產總額 × 100%
+
+風險性資產 = Σ（各項資產金額 × 風險權數）</div>
+      <ul class="symbols">
+        <li><code>合格自有資本</code>：主要是第一類資本（Tier 1，例如普通股、保留盈餘）加上第二類資本（Tier 2）</li>
+        <li><code>風險權數</code>：依資產風險給的百分比，風險越高權數越大</li>
+        <li><code>Σ</code>：全部加總</li>
+      </ul>
+
+      <h2>例子</h2>
+      <div class="example">
+        <p>某銀行有政府公債 400 億（風險權數 0%）、房貸 500 億（假設權數 35%）、企業放款 300 億（假設權數 100%），自有資本 75 億。資本適足率是多少？（權數為教學用假設值）</p>
+        <div class="calc">公債   400 × 0%   =   0 億
+房貸   500 × 35%  = 175 億
+企業   300 × 100% = 300 億
+風險性資產 = 0 + 175 + 300 = 475 億
+資本適足率 = 75 ÷ 475 × 100% ≈ 15.79%</div>
+        <p class="check">驗算：475 × 15.79% ≈ 75.0 億 ✔　15.79% 高於巴塞爾協定最低要求 8%</p>
+      </div>
+
+      <h2>常見誤區</h2>
+      <ul class="pitfall">
+        <li><strong>分母用總資產</strong>：分母是「風險加權後」的資產，不是帳上的總資產。總資產是 1,200 億，但風險性資產只有 475 億。</li>
+        <li><strong>「比率越高越好」</strong>：太高代表資本沒被有效運用，股東報酬率（ROE）會被拉低，銀行要在安全和獲利之間取捨。</li>
+        <li><strong>以為各國門檻都是 8%</strong>：8% 是巴塞爾協定的最低標準，各國主管機關可以要求更高，台灣另有資本緩衝等要求，以金管會最新規定為準。</li>
+      </ul>
+
+      <h2>考前速記</h2>
+      <ul class="recap">
+        <li>資本適足率 = 自有資本 ÷ 風險性資產</li>
+        <li>分母要乘上風險權數，越危險權數越高</li>
+        <li>巴塞爾協定最低要求 8%</li>
+        <li>目的：確保銀行有足夠本錢吸收損失、保護存款人</li>
+      </ul>
+
+      <h2>相關筆記</h2>
+      <ul class="related">
+        <li>之後補上（例如：存款保險、逾放比）</li>
+      </ul>
+
+      <p class="source">資料來源：金融機構管理課堂講義；巴塞爾銀行監理委員會（BCBS）</p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">Jiji 的金融筆記本｜依 AGENTS.md 規則整理</div>
+  </footer>
+</body>
+</html>
